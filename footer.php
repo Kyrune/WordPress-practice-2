@@ -1,7 +1,3 @@
-<p>Greetings from the footer</p>
-
-<?php wp_footer(); ?>
-
     <footer class="site-footer">
       <div class="site-footer__inner container container--narrow">
         <div class="group">
@@ -62,5 +58,6 @@
         </div>
       </div>
     </footer>
+    <?php wp_footer(); ?>
 </body>
 </html>
