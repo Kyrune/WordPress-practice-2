@@ -1,0 +1,1 @@
+<p>Greetings from the footer</p>
