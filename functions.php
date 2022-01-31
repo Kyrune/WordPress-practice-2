@@ -11,6 +11,7 @@
 
     add_action('wp_enqueue_scripts', 'university_files');
 
+    // Creates a title in the browser tab
     function university_features() {
         add_theme_support('title-tag');
     }
