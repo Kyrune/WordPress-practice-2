@@ -15,6 +15,7 @@
         <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
         <div class="site-header__menu group">
           <nav class="main-navigation">
+            <!-- Dynamic nav -->
             <!-- <?php
               wp_nav_menu(array(
                 'theme_location' => 'headerMenuLocation'
