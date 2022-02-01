@@ -13,10 +13,10 @@
 
     function university_features() {
         // Add header menu location in admin screen
-        register_nav_menu('headerMenuLocation', 'Header Menu Location');
+        // register_nav_menu('headerMenuLocation', 'Header Menu Location');
         // Add footer menu location in admin screen
-        register_nav_menu('footerLocationOne', 'Footer Location One');
-        register_nav_menu('footerLocationTwo', 'Footer Location Two');
+        // register_nav_menu('footerLocationOne', 'Footer Location One');
+        // register_nav_menu('footerLocationTwo', 'Footer Location Two');
         // Creates a title in the browser tab
         add_theme_support('title-tag');
     }
