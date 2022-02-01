@@ -13,6 +13,7 @@
 
     // Creates a title in the browser tab
     function university_features() {
+        register_nav_menu('headerMenuLocation', 'Header Menu Location');
         add_theme_support('title-tag');
     }
 
