@@ -26,23 +26,30 @@
            <?php }
         ?>
 
-      <div class="page-links">
-        <h2 class="page-links__title"><a href="<?php echo get_permalink($theParent); ?>"></a><?php echo get_the_title($theParent); ?></h2>
-        <ul class="min-list">
-          <?php 
-            if ($theParent) {
-              $findChildrenOf = $theParent;
-            } else {
-              $findChildrenOf = get_the_ID();
-            }
-          wp_list_pages(array(
-            'title_li' => NULL,
-            'child_of' => $findChildrenOf
-          )); 
-            
-          ?>
-        </ul>
-      </div>
+      <?php 
+        $testArray = get_pages(array(
+          'child_of' => get_the_ID()
+        ));
+      
+        if ($theParent or $testArray) { ?>
+        <div class="page-links">
+          <h2 class="page-links__title"><a href="<?php echo get_permalink($theParent); ?>"></a><?php echo get_the_title($theParent); ?></h2>
+          <ul class="min-list">
+            <?php
+              if ($theParent) {
+                  $findChildrenOf = $theParent;
+              } else {
+                  $findChildrenOf = get_the_ID();
+              }
+            wp_list_pages(array(
+              'title_li' => null,
+              'child_of' => $findChildrenOf,
+            ));
+              
+            ?>
+          </ul>
+        </div>
+      <?php } ?>
 
       <div class="generic-content">
         <?php the_content(); ?>
