@@ -14,6 +14,12 @@
             </div>
         </div>
 
+        <div class="container container--narrow page-section">
+            metabox here
+
+            <div class="generic-content"></div>
+        </div>
+
 
     <?php }
 
