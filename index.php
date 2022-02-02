@@ -18,7 +18,7 @@
       while(have_posts()) {
         the_post(); ?>
         <div class="post-item">
-          <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+          <h2 class="headline headline--medium headline--post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
           <div class="metabox">
               <p>Posted by Maria on 6.8.17 in News</p>
           </div>
