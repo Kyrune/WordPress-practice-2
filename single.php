@@ -21,7 +21,9 @@
                         <i class="fa fa-home" aria-hidden="true"></i> 
                         Blog Home
                     </a> 
-                    <span class="metabox__main"><?php the_title(); ?></span>
+                    <span class="metabox__main">
+                        Posted by <?php the_author_posts_link(); ?> on <?php the_time('n.j.y'); ?> in <?php echo get_the_category_list(', '); ?>
+                    </span>
                 </p>
             </div>
 
