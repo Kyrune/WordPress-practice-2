@@ -59,7 +59,8 @@
                   <h5 class="event-summary__title headline headline--tiny">
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                   </h5>
-                  <p>For the 100th year in a row we are voted #1. 
+                  <p>
+                    <?php echo wp_trim_words(get_the_content(), 18); ?>
                     <a href="#" class="nu gray">Read more</a>
                   </p>
                 </div>
