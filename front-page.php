@@ -48,8 +48,8 @@
               'posts_per_page' => 2
             ));
           
-            while (have_posts()) {
-              the_post(); ?>
+            while ($homepagePosts->have_posts()) {
+              $homepagePosts->the_post(); ?>
               <li><?php the_title(); ?></li>
            <?php }
           ?>
