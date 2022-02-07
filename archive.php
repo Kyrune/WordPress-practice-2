@@ -14,7 +14,7 @@
           echo 'Posts by '; the_author();
       } ?></h1> -->
       <div class="page-banner__intro">
-        <p>Keep up with our latest news</p>
+        <p></p>
       </div>
     </div>
   </div>
