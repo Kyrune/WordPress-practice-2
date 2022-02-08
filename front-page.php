@@ -26,10 +26,11 @@
               <div class="event-summary">
                 <a class="event-summary__date t-center" href="#">
                   <span class="event-summary__month"><?php 
-                    // Get event date
+                    // Get event month date
                     $eventDate = new DateTime(get_field('event_date'));
                     echo $eventDate->format('M');
                   ?></span>
+                  <!-- Get event day date -->
                   <span class="event-summary__day"><?php echo $eventDate->format('d'); ?></span>
                 </a>
                 <div class="event-summary__content">
