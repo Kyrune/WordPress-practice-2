@@ -19,7 +19,7 @@
                 <p>
                     <a class="metabox__blog-home-link" href="<?php echo site_url('/blog'); ?>">
                         <i class="fa fa-home" aria-hidden="true"></i> 
-                        Blog Home
+                        Events Home
                     </a> 
                     <span class="metabox__main">
                         <?php the_title(); ?>
