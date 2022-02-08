@@ -23,6 +23,7 @@
               'meta_key' => 'event_date',
               'orderby' => 'meta_value_num',
               'order' => 'ASC',
+              // Order events by date
               'meta_query' => array(
                 array(
                   'key' => 'event_date',
