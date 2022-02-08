@@ -20,6 +20,11 @@
               'posts_per_page' => 2,
               'post_type' => 'event'
             ));
+
+            while ($homepageEvents->have_posts()) {
+              $homepageEvents->the_post(); ?>
+              <li><?php the_title(); ?></li>
+            <?php }
           ?>
 
           <div class="event-summary">
