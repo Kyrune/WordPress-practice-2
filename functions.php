@@ -23,12 +23,16 @@
 
     add_action('after_setup_theme', 'university_features');
 
+    // Adds post type of Events
     function university_post_types() {
         register_post_type('event', array(
+            // Sets post type to public in admin screen
             'public' => true,
+            // Sets name of post type in admin screen to Events
             'labels' => array(
                 'name' => 'Events'
             ),
+            // Icon for admin screen
             'menu_icon' => 'dashicons-calendar'
         ));
     }
