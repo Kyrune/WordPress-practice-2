@@ -28,6 +28,8 @@
     //     register_post_type('event', array(
     //         // Sets post type to public in admin screen
     //         'public' => true,
+    //         // Uses modern block editor screen.
+    //         'show_in_rest' => true,
     //         // Sets name of post type in admin screen to Events
     //         'labels' => array(
     //             'name' => 'Events'
