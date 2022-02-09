@@ -15,8 +15,26 @@
 
   <div class="container container--narrow page-section">
     <?php
-      while(have_posts()) {
-        the_post(); ?>
+
+        $today = date('Ymd');
+        $pastEvents = new WP_Query(array(
+            'post_type' => 'event',
+            'meta_key' => 'event_date',
+            'orderby' => 'meta_value_num',
+            'order' => 'ASC',
+            // Order events by date
+            'meta_query' => array(
+                array(
+                'key' => 'event_date',
+                'compare' => '<',
+                'value' => $today,
+                'type' => 'numeric'
+                )
+            )
+        ));
+
+      while($pastEvents->have_posts()) {
+        $pastEvents->the_post(); ?>
         <div class="event-summary">
           <a class="event-summary__date t-center" href="#">
               <span class="event-summary__month"><?php 
