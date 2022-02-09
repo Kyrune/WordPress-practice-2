@@ -23,6 +23,8 @@
 
     add_action('after_setup_theme', 'university_features');
 
+    add_action('pre_get_posts', 'university_adjust_queries')
+
     // Adds post type of Events
     // function university_post_types() {
     //     register_post_type('event', array(
