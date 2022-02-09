@@ -30,6 +30,7 @@
             $query->set('meta_key', 'event_date');
             $query->set('orderby', 'meta_value_num');
             $query->set('order', 'ASC');
+            // Prevent past event from showing
             $query->set('meta_query', array(
                 array(
                   'key' => 'event_date',
