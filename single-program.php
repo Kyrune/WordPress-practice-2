@@ -55,6 +55,8 @@
               )
             ));
 
+            echo '<h2>Upcoming ' . get_the_title() . ' Events</h2>';
+
             // Outputs related programs
             while ($homepageEvents->have_posts()) {
               $homepageEvents->the_post(); ?>
