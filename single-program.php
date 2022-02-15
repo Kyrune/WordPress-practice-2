@@ -55,6 +55,7 @@
               )
             ));
 
+            // Outputs related programs
             while ($homepageEvents->have_posts()) {
               $homepageEvents->the_post(); ?>
               <div class="event-summary">
