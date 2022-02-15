@@ -55,7 +55,7 @@
               )
             ));
 
-            echo '<h2>Upcoming ' . get_the_title() . ' Events</h2>';
+            echo '<h2 class="headline headline--medium">Upcoming ' . get_the_title() . ' Events</h2>';
 
             // Outputs related programs
             while ($homepageEvents->have_posts()) {
