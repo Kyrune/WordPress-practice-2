@@ -31,6 +31,10 @@
 
             <?php  
                 $relatedPrograms = get_field('related_programs');
+
+                foreach($relatedPrograms as $program) {
+                    echo get_the_title($program);
+                }
             ?>
         </div>
 
