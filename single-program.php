@@ -30,7 +30,7 @@
             <div class="generic-content"><?php the_content(); ?></div>
 
             <?php 
-
+              // Custom Query for Professors
               $relatedProfessors = new WP_Query(array(
                 'posts_per_page' => -1,
                 'post_type' => 'professor',
@@ -59,7 +59,7 @@
               }
 
 
-              // Custom Query
+              // Custom Query for related Programs
               $today = date('Ymd');
               $homepageEvents = new WP_Query(array(
                 'posts_per_page' => 2,
