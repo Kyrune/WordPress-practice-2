@@ -54,7 +54,9 @@
                 while ($relatedProfessors->have_posts()) {
                   $relatedProfessors->the_post(); ?>
                   <li class="professor-card__list-item">
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    <a class="professor-card" href="<?php the_permalink(); ?>">
+                      
+                    </a>
                   </li>
               <?php }
               }
