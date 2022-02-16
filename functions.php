@@ -19,6 +19,7 @@
         // register_nav_menu('footerLocationTwo', 'Footer Location Two');
         // Creates a title in the browser tab
         add_theme_support('title-tag');
+        // Add featured image for thumbnails
         add_theme_support('post-thumbnails');
     }
 
