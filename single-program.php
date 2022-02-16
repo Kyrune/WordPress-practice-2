@@ -50,6 +50,7 @@
                 echo '<hr class="section-break">';
                 echo '<h2 class="headline headline--medium">' . get_the_title() . ' Professors</h2>';
 
+                echo '<ul class="professor-cards">';
                 // Outputs related professors
                 while ($relatedProfessors->have_posts()) {
                   $relatedProfessors->the_post(); ?>
@@ -60,6 +61,7 @@
                     </a>
                   </li>
               <?php }
+              echo '</ul>';
               }
 
               // Reset post data (use for multiple query posts)
