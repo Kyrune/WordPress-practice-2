@@ -36,7 +36,6 @@
                 'post_type' => 'professor',
                 'orderby' => 'title',
                 'order' => 'ASC',
-                // Order events by date
                 'meta_query' => array(
                   // Query for related programs
                   array(
@@ -51,7 +50,7 @@
                 echo '<hr class="section-break">';
                 echo '<h2 class="headline headline--medium">' . get_the_title() . ' Professors</h2>';
 
-                // Outputs related programs
+                // Outputs related professors
                 while ($relatedProfessors->have_posts()) {
                   $relatedProfessors->the_post(); ?>
                   <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
