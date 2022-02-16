@@ -21,6 +21,7 @@
         add_theme_support('title-tag');
         // Add featured image for thumbnails
         add_theme_support('post-thumbnails');
+        // Image size
         add_image_size('professorLandscape', 400, 260, false);
     }
 
