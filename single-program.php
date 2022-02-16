@@ -53,7 +53,9 @@
                 // Outputs related professors
                 while ($relatedProfessors->have_posts()) {
                   $relatedProfessors->the_post(); ?>
-                  <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                  <li class="professor-card__list-item">
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                  </li>
               <?php }
               }
 
