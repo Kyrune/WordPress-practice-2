@@ -58,7 +58,7 @@
               <?php }
               }
 
-              // Reset post data
+              // Reset post data (use for multiple query posts)
               wp_reset_postdata();
 
               // Custom Query for related Programs
