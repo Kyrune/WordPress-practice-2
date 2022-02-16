@@ -55,7 +55,8 @@
                   $relatedProfessors->the_post(); ?>
                   <li class="professor-card__list-item">
                     <a class="professor-card" href="<?php the_permalink(); ?>">
-                      
+                      <img class="professor-card__image">
+                      <span></span>
                     </a>
                   </li>
               <?php }
