@@ -30,32 +30,32 @@
             <div class="generic-content"><?php the_content(); ?></div>
 
             <?php 
-            // Custom Query
-            $today = date('Ymd');
-            $homepageEvents = new WP_Query(array(
-              'posts_per_page' => 2,
-              'post_type' => 'event',
-              'meta_key' => 'event_date',
-              'orderby' => 'meta_value_num',
-              'order' => 'ASC',
-              // Order events by date
-              'meta_query' => array(
-                array(
-                  'key' => 'event_date',
-                  'compare' => '>=',
-                  'value' => $today,
-                  'type' => 'numeric'
-                ),
-                // Query for related programs
-                array(
-                    'key' => 'related_programs',
-                    'compare' => 'LIKE',
-                    'value' => '"' . get_the_ID() . '"'
+              // Custom Query
+              $today = date('Ymd');
+              $homepageEvents = new WP_Query(array(
+                'posts_per_page' => 2,
+                'post_type' => 'event',
+                'meta_key' => 'event_date',
+                'orderby' => 'meta_value_num',
+                'order' => 'ASC',
+                // Order events by date
+                'meta_query' => array(
+                  array(
+                    'key' => 'event_date',
+                    'compare' => '>=',
+                    'value' => $today,
+                    'type' => 'numeric'
+                  ),
+                  // Query for related programs
+                  array(
+                      'key' => 'related_programs',
+                      'compare' => 'LIKE',
+                      'value' => '"' . get_the_ID() . '"'
+                  )
                 )
-              )
-            ));
+              ));
 
-            if ($homepageEvents->have_posts()) {
+              if ($homepageEvents->have_posts()) {
                 echo '<hr class="section-break">';
                 echo '<h2 class="headline headline--medium">Upcoming ' . get_the_title() . ' Events</h2>';
     
@@ -86,7 +86,7 @@
                       </p>
                     </div>
                   </div>
-                <?php }
+              <?php }
             }
            
           ?>
