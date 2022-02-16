@@ -58,6 +58,7 @@
               <?php }
               }
 
+              // Reset post data
               wp_reset_postdata();
 
               // Custom Query for related Programs
