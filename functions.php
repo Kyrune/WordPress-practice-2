@@ -9,7 +9,7 @@
         if (!$args['subtitle']) {
             $args['subtitle'] = get_field('page_banner_subtitle');
         }
-
+        // Default photo for page banner if no custom photo is found
         if (!$args['photo']) {
             if (get_field('page_banner_background_image') AND !is_archive() AND !is_home()) {
                 $args['photo'] = get_field('page_banner_background_image')['sizes']['pageBanner'];
