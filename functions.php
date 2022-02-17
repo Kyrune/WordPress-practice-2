@@ -1,11 +1,11 @@
 <?php 
 
     function pageBanner($args) {
-        
+        // Default title if no custom title is found
         if (!$args['title']) {
             $args['title'] = get_the_title();
         }
-
+        // Default subtitle if no custom subtitle is found
         if (!$args['subtitle']) {
             $args['subtitle'] = get_field('page_banner_subtitle');
         }
