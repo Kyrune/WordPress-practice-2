@@ -1,6 +1,6 @@
 <?php 
 
-    function pageBanner($args) {
+    function pageBanner($args = NULL) {
         // Default title if no custom title is found
         if (!$args['title']) {
             $args['title'] = get_the_title();
