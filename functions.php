@@ -21,10 +21,10 @@
         add_theme_support('title-tag');
         // Add featured image for thumbnails
         add_theme_support('post-thumbnails');
-        // Image sizes
+        // Image sizes for professor images
         add_image_size('professorLandscape', 400, 260, true);
         add_image_size('professorPortrait', 480, 650, true);
-
+        // Image size for page banner image
         add_image_size('pageBanner', 1500, 350, true);
     }
 
