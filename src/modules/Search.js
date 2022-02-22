@@ -11,8 +11,8 @@ class Search {
 
     // 2. events 
     events() {
-        this.openButton.on("click", this.openOverlay);
-        this.closeButton.on("click", this.closeOverlay);
+        this.openButton.on("click", this.openOverlay.bind(this));
+        this.closeButton.on("click", this.closeOverlay.bind(this));
     }
 
     // 3. methods (function, action...)
