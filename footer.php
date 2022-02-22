@@ -72,6 +72,15 @@
         </div>
       </div>
     </footer>
+
+    <div class="search-overlay search-overlay--active">
+      <div class="search-overlay__top">
+        <div class="container">
+          <input type="text" class="search-term" placeholder="What are you looking for?" id="search-term">
+        </div>
+      </div>
+    </div>
+
     <?php wp_footer(); ?>
 </body>
 </html>
