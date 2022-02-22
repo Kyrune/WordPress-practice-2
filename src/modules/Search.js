@@ -7,7 +7,12 @@ class Search {
         this.closeButton = $(".search-overlay__close");
         this.searchOverlay = $(".search-overlay");
     }
+
     // 2. events 
+    events() {
+        this.openButton.on("click", this.openOverlay);
+        this.closeButton.on("click", this.closeOverlay);
+    }
 
     // 3. methods (function, action...)
     openOverlay() {
