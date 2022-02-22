@@ -20,7 +20,7 @@ class Search {
     }
 
     closeOverlay() {
-
+        this.searchOverlay.removeClass("search-overlay--active");
     }
 }
 
