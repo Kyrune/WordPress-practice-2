@@ -9,6 +9,7 @@ class Search {
         this.searchField = $("#search-term");
         this.events();
         this.isOverlayOpen = false;
+        this.typingTimer;
     }
 
     // 2. events 
