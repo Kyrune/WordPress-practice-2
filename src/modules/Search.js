@@ -6,6 +6,7 @@ class Search {
         this.openButton = $(".js-search-trigger");
         this.closeButton = $(".search-overlay__close");
         this.searchOverlay = $(".search-overlay");
+        this.searchField = $("#search-term");
         this.events();
         this.isOverlayOpen = false;
     }
@@ -18,6 +19,10 @@ class Search {
     }
 
     // 3. methods (functions, actions...)
+    typingLogic() {
+
+    }
+
     keyPressDispatcher(e) {
         if (e.keyCode == 83 && !this.isOverlayOpen) {
             this.openOverlay();
