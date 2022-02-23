@@ -22,7 +22,7 @@ class Search {
 
     // 3. methods (functions, actions...)
     typingLogic() {
-        setTimeout(function () {console.log("Timeout test");}, 2000);
+        this.typingTimer = setTimeout(function () {console.log("Timeout test");}, 2000);
     }
 
     keyPressDispatcher(e) {
