@@ -15,7 +15,7 @@ class Search {
         this.closeButton.on("click", this.closeOverlay.bind(this));
     }
 
-    // 3. methods (function, action...)
+    // 3. methods (functions, actions...)
     openOverlay() {
         this.searchOverlay.addClass("search-overlay--active");
         $("body").addClass("body-no-scroll");
