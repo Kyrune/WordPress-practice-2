@@ -18,6 +18,7 @@ class Search {
     // 3. methods (function, action...)
     openOverlay() {
         this.searchOverlay.addClass("search-overlay--active");
+        $("body").addClass("body-no-scroll");
     }
 
     closeOverlay() {
