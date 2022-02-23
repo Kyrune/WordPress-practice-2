@@ -23,6 +23,10 @@ class Search {
         if (e.keyCode == 83) {
             this.openOverlay();
         }
+
+        if (e.keyCode == 27) {
+            this.closeOverlay();
+        }
     }
 
     openOverlay() {
