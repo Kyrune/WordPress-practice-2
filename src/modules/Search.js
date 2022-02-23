@@ -17,8 +17,12 @@ class Search {
     }
 
     // 3. methods (functions, actions...)
-    keyPressDispatcher() {
-        console.log("this is a test");
+    keyPressDispatcher(e) {
+        console.log(e.keyCode);
+        
+        if (e.keyCode == 83) {
+            this.openOverlay();
+        }
     }
 
     openOverlay() {
