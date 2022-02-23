@@ -22,6 +22,7 @@ class Search {
 
     // 3. methods (functions, actions...)
     typingLogic() {
+        clearTimeout(this.typingTimer);
         this.typingTimer = setTimeout(function () {console.log("Timeout test");}, 2000);
     }
 
