@@ -11,6 +11,7 @@ class Search {
         this.events();
         this.isOverlayOpen = false;
         this.isSpinnerVisible = false;
+        this.previousValue;
         this.typingTimer;
     }
 
