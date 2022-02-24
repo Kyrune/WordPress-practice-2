@@ -10,6 +10,7 @@ class Search {
         this.searchField = $("#search-term");
         this.events();
         this.isOverlayOpen = false;
+        this.isSpinnerVisible = false;
         this.typingTimer;
     }
 
