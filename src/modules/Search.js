@@ -34,6 +34,7 @@ class Search {
 
     getResults() {
         this.resultsDiv.html("Imagine real search results here");
+        this.isSpinnerVisible = false;
     }
 
     keyPressDispatcher(e) {
