@@ -24,7 +24,11 @@ class Search {
     // 3. methods (functions, actions...)
     typingLogic() {
         clearTimeout(this.typingTimer);
-        this.typingTimer = setTimeout(function () {console.log("Timeout test");}, 2000);
+        this.typingTimer = setTimeout(this.getResults.bind(this), 2000);
+    }
+
+    getResults() {
+        this.resultsDiv.html("Imagine real search results here");
     }
 
     keyPressDispatcher(e) {
