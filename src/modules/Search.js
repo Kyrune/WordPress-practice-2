@@ -24,6 +24,7 @@ class Search {
     // 3. methods (functions, actions...)
     typingLogic() {
         clearTimeout(this.typingTimer);
+        this.resultsDiv.html('<div class="spinner-loader"></div>');
         this.typingTimer = setTimeout(this.getResults.bind(this), 2000);
     }
 
