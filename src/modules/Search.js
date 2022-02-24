@@ -27,11 +27,18 @@ class Search {
     typingLogic() {
         if (this.searchField.val() != this.previousValue) {
             clearTimeout(this.typingTimer);
-            if (!this.isSpinnerVisible) {
-                this.resultsDiv.html('<div class="spinner-loader"></div>');
-                this.isSpinnerVisible = true;
+
+            if (this.searchField.val()) {
+                if (!this.isSpinnerVisible) {
+                    this.resultsDiv.html('<div class="spinner-loader"></div>');
+                    this.isSpinnerVisible = true;
+                }
+                this.typingTimer = setTimeout(this.getResults.bind(this), 2000);
+            } else {
+                this.resultsDiv.html('');
+                this.isSpinnerVisible = false;
             }
-            this.typingTimer = setTimeout(this.getResults.bind(this), 2000);
+
         }
 
         this.previousValue = this.searchField.val();
