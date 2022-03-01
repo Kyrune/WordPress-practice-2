@@ -47,7 +47,7 @@ class Search {
     // Get list of posts from live search
     getResults() {
         $.getJSON('http://fictional-university.local/wp-json/wp/v2/posts?search=' + this.searchField.val(), function (posts) {
-            alert(posts[0].title.rendered);
+            
         });
     }
 
