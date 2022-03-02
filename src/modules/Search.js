@@ -47,17 +47,18 @@ class Search {
 
     // Get list of posts/pages from live search
     getResults() {
-        $.getJSON(universityData.root_url + '/wp-json/wp/v2/posts?search=' + this.searchField.val(), posts => {
-            $.getJSON(universityData.root_url + '/wp-json/wp/v2/pages?search=' + this.searchField.val(), pages => {
-                var combineResults = posts.concat(pages);
-                this.resultsDiv.html(`
-                    <h2 class="search-overlay__section-title">General Info</h2>
-                    ${combineResults.length ? '<ul class="link-list min-list">' : '<p>No general information matches that search.</p>'}
-                        ${combineResults.map(item => `<li><a href="${item.link}">${item.title.rendered}</a></li>`).join('')}
-                    ${combineResults.length ? '</ul>' : ''}
-                `);
-                this.isSpinnerVisible = false;
-            });
+        $.when(
+            $.getJSON(universityData.root_url + '/wp-json/wp/v2/posts?search=' + this.searchField.val()), 
+            $.getJSON(universityData.root_url + '/wp-json/wp/v2/pages?search=' + this.searchField.val())
+            ).then((posts, pages) => {
+            var combineResults = posts[0].concat(pages[0]);
+            this.resultsDiv.html(`
+                <h2 class="search-overlay__section-title">General Info</h2>
+                ${combineResults.length ? '<ul class="link-list min-list">' : '<p>No general information matches that search.</p>'}
+                    ${combineResults.map(item => `<li><a href="${item.link}">${item.title.rendered}</a></li>`).join('')}
+                ${combineResults.length ? '</ul>' : ''}
+            `);
+            this.isSpinnerVisible = false;
         });
     }
 
