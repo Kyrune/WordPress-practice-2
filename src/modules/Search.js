@@ -3,6 +3,7 @@ import $ from 'jquery';
 class Search {
     // 1. describe and create/initiate our object
     constructor() {
+        this.addSearchHTML();
         this.resultsDiv = $("#search-overlay__results");
         this.openButton = $(".js-search-trigger");
         this.closeButton = $(".search-overlay__close");
