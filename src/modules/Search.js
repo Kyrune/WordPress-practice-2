@@ -45,7 +45,7 @@ class Search {
         this.previousValue = this.searchField.val();
     }
 
-    // Get list of posts from live search
+    // Get list of posts/pages from live search
     getResults() {
         $.getJSON(universityData.root_url + '/wp-json/wp/v2/posts?search=' + this.searchField.val(), posts => {
             $.getJSON(universityData.root_url + '/wp-json/wp/v2/pages?search=' + this.searchField.val(), pages => {
