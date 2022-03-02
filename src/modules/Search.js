@@ -80,6 +80,7 @@ class Search {
         this.isOverlayOpen = false;
     }
 
+    // Search overlay html
     addSearchHTML() {
         $("body").append(`
             <div class="search-overlay">
