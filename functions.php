@@ -1,5 +1,7 @@
 <?php 
 
+    add_action('rest_api_init', 'university_custom_rest');
+
     function pageBanner($args = NULL) {
         // Default title if no custom title is found
         if (!$args['title']) {
