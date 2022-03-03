@@ -1,5 +1,7 @@
 <?php 
 
+    require get_theme_file_path('/includes/search-route.php');
+
     // Create a custom REST API
     function university_custom_rest() {
         register_rest_field('post', 'authorName', array(
