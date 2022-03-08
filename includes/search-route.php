@@ -12,7 +12,7 @@
     function universitySearchResults($data) {
         // 10 most recent posts from professors
         $professors = new WP_Query(array(
-            'post_type' => 'professor',
+            'post_type' => array('post', 'page', 'professor'),
             // Dynamic search
             's' => sanitize_text_field($data['term'])
         ));
