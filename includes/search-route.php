@@ -9,4 +9,9 @@
         ));
     }
 
-    
+    function universitySearchResults() {
+        // 10 most recent posts from professors
+        $professors = new WP_Query(array(
+            'post_type' => 'professor'
+        ));
+    }
