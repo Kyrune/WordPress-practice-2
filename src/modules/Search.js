@@ -47,6 +47,7 @@ class Search {
 
     // Get list of posts/pages from live search
     getResults() {
+        // Asyncronous
         $.when(
             $.getJSON(universityData.root_url + '/wp-json/wp/v2/posts?search=' + this.searchField.val()), 
             $.getJSON(universityData.root_url + '/wp-json/wp/v2/pages?search=' + this.searchField.val())
