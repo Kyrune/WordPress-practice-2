@@ -27,11 +27,14 @@
 
         while($mainQuery->have_posts()) {
             $mainQuery->the_post();
-            // Add array to post
-            array_push($results['generalInfo'], array(
-                'title' => get_the_title(),
-                'permalink' => get_the_permalink()
-            ));
+
+            if (get_post_type() == 'post' OR get_post_type() == 'page') {
+                // Add array to post
+                array_push($results['generalInfo'], array(
+                    'title' => get_the_title(),
+                    'permalink' => get_the_permalink()
+                ));
+            }
         }
 
         return $results;
