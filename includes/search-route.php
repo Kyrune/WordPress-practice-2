@@ -15,6 +15,7 @@
             'post_type' => 'professor'
         ));
 
-        return $professors->posts;
+        $professorResults = array();
+
+        return $professorResults;
     }
-    
