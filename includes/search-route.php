@@ -44,9 +44,9 @@
                 ));
             }
 
-            if (get_post_type() == 'program') {
+            if (get_post_type() == 'campus') {
                 // Add array to post
-                array_push($results['programs'], array(
+                array_push($results['campuses'], array(
                     'title' => get_the_title(),
                     'permalink' => get_the_permalink()
                 ));
