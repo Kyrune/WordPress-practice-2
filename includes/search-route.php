@@ -14,4 +14,7 @@
         $professors = new WP_Query(array(
             'post_type' => 'professor'
         ));
+
+        return $professors->posts;
     }
+    
