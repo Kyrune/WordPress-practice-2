@@ -12,21 +12,27 @@
     function universitySearchResults($data) {
         // 10 most recent posts from professors
         $mainQuery = new WP_Query(array(
-            'post_type' => array('post', 'page', 'professor'),
+            'post_type' => array('post', 'page', 'professor', 'program', 'campus', 'event'),
             // Dynamic search
             's' => sanitize_text_field($data['term'])
         ));
 
-        $professorResults = array();
+        $results = array(
+            'generalInfo' => array(),
+            'professors' => array(),
+            'programs' => array(),
+            'events' => array(),
+            'campuses' => array()
+        );
 
         while($mainQuery->have_posts()) {
             $mainQuery->the_post();
             // Add array to post
-            array_push($professorResults, array(
+            array_push($results['generalInfo'], array(
                 'title' => get_the_title(),
                 'permalink' => get_the_permalink()
             ));
         }
 
-        return $professorResults;
+        return $results;
     }
