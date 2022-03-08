@@ -35,6 +35,14 @@
                     'permalink' => get_the_permalink()
                 ));
             }
+
+            if (get_post_type() == 'professor') {
+                // Add array to post
+                array_push($results['professors'], array(
+                    'title' => get_the_title(),
+                    'permalink' => get_the_permalink()
+                ));
+            }
         }
 
         return $results;
