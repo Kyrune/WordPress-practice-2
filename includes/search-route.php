@@ -11,7 +11,7 @@
 
     function universitySearchResults($data) {
         // 10 most recent posts from professors
-        $professors = new WP_Query(array(
+        $mainQuery = new WP_Query(array(
             'post_type' => array('post', 'page', 'professor'),
             // Dynamic search
             's' => sanitize_text_field($data['term'])
@@ -19,8 +19,8 @@
 
         $professorResults = array();
 
-        while($professors->have_posts()) {
-            $professors->the_post();
+        while($mainQuery->have_posts()) {
+            $mainQuery->the_post();
             // Add array to post
             array_push($professorResults, array(
                 'title' => get_the_title(),
