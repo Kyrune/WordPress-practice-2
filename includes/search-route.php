@@ -69,7 +69,8 @@
                 array_push($results['events'], array(
                     'title' => get_the_title(),
                     'permalink' => get_the_permalink(),
-                    'month' => $eventDate->format('M')
+                    'month' => $eventDate->format('M'),
+                    'day' => $eventDate->format('d')
                 ));
             }
         }
