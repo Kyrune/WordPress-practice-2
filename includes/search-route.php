@@ -47,6 +47,14 @@
                 ));
             }
 
+            if (get_post_type() == 'program') {
+                // Add array to post
+                array_push($results['programs'], array(
+                    'title' => get_the_title(),
+                    'permalink' => get_the_permalink()
+                ));
+            }
+
             if (get_post_type() == 'campus') {
                 // Add array to post
                 array_push($results['campuses'], array(
