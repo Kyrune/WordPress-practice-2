@@ -62,8 +62,13 @@ class Search {
                         ${results.programs.length ? '<ul class="link-list min-list">' : `<p>No programs match that search. <a href="${universityData.root_url}/programs">View all programs</a></p>`}
                             ${results.programs.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
                         ${results.programs.length ? '</ul>' : ''}
-                        <h2 class="search-overlay__section-title">Professors</h2>
 
+                        <h2 class="search-overlay__section-title">Professors</h2>
+                        ${results.professors.length ? '<ul class="professor-cards">' : `<p>No professors match that search.</p>`}
+                            ${results.professors.map(item => `
+                                
+                            `).join('')}
+                        ${results.professors.length ? '</ul>' : ''}
                     </div>
                     <div class="one-third">
                         <h2 class="search-overlay__section-title">Campuses</h2>
