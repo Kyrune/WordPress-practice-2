@@ -42,7 +42,8 @@
                 // Add array to post
                 array_push($results['professors'], array(
                     'title' => get_the_title(),
-                    'permalink' => get_the_permalink()
+                    'permalink' => get_the_permalink(),
+                    'image' => get_the_post_thumbnail_url()
                 ));
             }
 
