@@ -82,6 +82,7 @@
             }
         }
 
+        // Custom query for program relationships
         $programRelationshipQuery = new WP_Query(array(
             'post_type' => 'professor',
             'meta_query' => array(
