@@ -69,7 +69,7 @@ class Search {
                                 <li class="professor-card__list-item">
                                     <a class="professor-card" href="${item.permalink}">
                                         <img class="professor-card__image" src="${item.image}">
-                                        <span class="professor-card__name"><?php the_title(); ?></span>
+                                        <span class="professor-card__name">${item.title}</span>
                                     </a>
                                 </li>
                             `).join('')}
