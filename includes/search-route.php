@@ -82,5 +82,16 @@
             }
         }
 
+        $programRelationshipQuery = new WP_Query(array(
+            'post_type' => 'professor',
+            'meta_query' => array(
+                array(
+                    'key' => 'related_programs',
+                    'compare' => 'LIKE',
+                    'value' => '"57"'
+                )
+            )
+        ));
+
         return $results;
     }
