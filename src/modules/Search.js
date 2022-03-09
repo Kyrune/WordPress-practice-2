@@ -87,7 +87,7 @@ class Search {
                                 <div class="event-summary">
                                     <a class="event-summary__date t-center" href="${item.permalink}">
                                         <span class="event-summary__month">${item.month}</span>
-                                        <span class="event-summary__day"><?php echo $eventDate->format('d'); ?></span>
+                                        <span class="event-summary__day">${item.day}</span>
                                     </a>
                                     <div class="event-summary__content">
                                         <h5 class="event-summary__title headline headline--tiny">
