@@ -77,7 +77,7 @@
                     'permalink' => get_the_permalink(),
                     'month' => $eventDate->format('M'),
                     'day' => $eventDate->format('d'),
-                     
+                    'description' => $description
                 ));
             }
         }
