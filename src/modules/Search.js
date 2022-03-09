@@ -95,7 +95,7 @@ class Search {
                                         </h5>
                                         <p>
                                             ${item.description}
-                                            <a href="<?php the_permalink(); ?>" class="nu gray">Learn more</a>
+                                            <a href="${item.permalink}" class="nu gray">Learn more</a>
                                         </p>
                                     </div>
                                 </div>
