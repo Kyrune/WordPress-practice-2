@@ -51,7 +51,8 @@
                 // Add array to post
                 array_push($results['programs'], array(
                     'title' => get_the_title(),
-                    'permalink' => get_the_permalink()
+                    'permalink' => get_the_permalink(),
+                    'id' => get_the_id()
                 ));
             }
 
