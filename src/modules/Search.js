@@ -80,8 +80,10 @@ class Search {
                         ${results.campuses.length ? '<ul class="link-list min-list">' : `<p>No campuses match that search. <a href="${universityData.root_url}/campuses">View all campuses</a></p>`}
                             ${results.campuses.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
                         ${results.campuses.length ? '</ul>' : ''}
-                        <h2 class="search-overlay__section-title">Events</h2>
 
+                        <h2 class="search-overlay__section-title">Events</h2>
+                        ${results.events.length ? '<ul class="link-list min-list">' : `<p>No events match that search. <a href="${universityData.root_url}/campuses">View all campuses</a></p>`}
+                            ${results.events.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
                     </div>
                 </div>
             `);
