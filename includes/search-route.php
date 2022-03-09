@@ -90,7 +90,7 @@
                 array(
                     'key' => 'related_programs',
                     'compare' => 'LIKE',
-                    'value' => '"57"'
+                    'value' => '"' . $results['programs'][0]['id'] . '"'
                 )
             )
         ));
