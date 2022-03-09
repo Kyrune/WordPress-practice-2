@@ -85,13 +85,11 @@ class Search {
                         ${results.events.length ? '' : `<p>No events match that search. <a href="${universityData.root_url}/events">View all events</a></p>`}
                             ${results.events.map(item => `
                                 <div class="event-summary">
-                                    <a class="event-summary__date t-center" href="#">
+                                    <a class="event-summary__date t-center" href="${item.permalink}">
                                         <span class="event-summary__month"><?php 
-                                            // Get event month date
                                             $eventDate = new DateTime(get_field('event_date'));
                                             echo $eventDate->format('M');
                                         ?></span>
-                                        <!-- Get event day date -->
                                         <span class="event-summary__day"><?php echo $eventDate->format('d'); ?></span>
                                     </a>
                                     <div class="event-summary__content">
