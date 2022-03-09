@@ -94,5 +94,18 @@
             )
         ));
 
+        while($programRelationshipQuery->have_posts()) {
+            $programRelationshipQuery->the_post();
+
+            if (get_post_type() == 'professor') {
+                // Add array to post
+                array_push($results['professors'], array(
+                    'title' => get_the_title(),
+                    'permalink' => get_the_permalink(),
+                    'image' => get_the_post_thumbnail_url(0, 'professorLandscape')
+                ));
+            }
+        }
+
         return $results;
     }
