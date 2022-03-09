@@ -107,5 +107,7 @@
             }
         }
 
+        $results['professors'] = array_values(array_unique($results['professors'], SORT_REGULAR));
+
         return $results;
     }
