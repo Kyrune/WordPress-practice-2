@@ -3,7 +3,7 @@
   get_header();
   pageBanner(array(
     'title' => 'Search Results',
-    'subtitle' => 'You searched for &ldquo;x&rdquo;'
+    'subtitle' => 'You searched for &ldquo;' . get_search_query() . '&rdquo;'
   ));
 
 ?>
