@@ -50,8 +50,10 @@ class Search {
     this.previousValue = this.searchField.value
   }
 
+  // Get list of posts/pages from live search
   async getResults() {
     try {
+      // Custom API url
       const response = await axios.get(universityData.root_url + "/wp-json/university/v1/search?term=" + this.searchField.value)
       const results = response.data
       this.resultsDiv.innerHTML = `
@@ -146,6 +148,7 @@ class Search {
     this.isOverlayOpen = false
   }
 
+  // Search overlay html
   addSearchHTML() {
     document.body.insertAdjacentHTML(
       "beforeend",
