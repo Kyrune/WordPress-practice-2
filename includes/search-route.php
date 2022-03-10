@@ -96,7 +96,7 @@
     
             // Custom query for programs & professors relationships
             $programRelationshipQuery = new WP_Query(array(
-                'post_type' => 'professor',
+                'post_type' => array('professor', 'event'),
                 'meta_query' => $programsMetaQuery
             ));
     
