@@ -49,7 +49,7 @@
         <!-- esc_url = security best practice -->
         <form class="search-form" method="get" action="<?php echo esc_url(site_url('/')); ?>">
         <label for="s">Perform a New Search:</label>
-            <input type="search" name="s">
+            <input id="s" type="search" name="s">
             <input type="submit" value="Search">
         </form>
       </div>
