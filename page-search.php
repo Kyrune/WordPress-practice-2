@@ -46,7 +46,8 @@
       <?php } ?>
 
       <div class="generic-content">
-        <form>
+        
+        <form action="<?php echo esc_url(site_url('/')); ?>">
             <input type="search" name="s">
             <input type="submit" value="Search">
         </form>
