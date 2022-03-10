@@ -47,7 +47,7 @@
 
       <div class="generic-content">
         <form>
-            <input type="search">
+            <input type="search" name="s">
             <input type="submit" value="Search">
         </form>
       </div>
