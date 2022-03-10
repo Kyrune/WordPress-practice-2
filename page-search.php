@@ -46,7 +46,7 @@
       <?php } ?>
 
       <div class="generic-content">
-        
+        <!-- esc_url = security best practice -->
         <form action="<?php echo esc_url(site_url('/')); ?>">
             <input type="search" name="s">
             <input type="submit" value="Search">
