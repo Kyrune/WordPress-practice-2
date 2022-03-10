@@ -2,8 +2,8 @@
 
   get_header();
   pageBanner(array(
-    'title' => 'Welcome to our blog!',
-    'subtitle' => 'Keep up with our latest news.'
+    'title' => 'Search Results',
+    'subtitle' => 'You searched for &ldquo;x&rdquo;'
   ));
 
 ?>
