@@ -131,6 +131,7 @@
                 }
             }
     
+            // Removes duplicates
             $results['professors'] = array_values(array_unique($results['professors'], SORT_REGULAR));
         }
 
