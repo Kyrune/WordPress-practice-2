@@ -102,6 +102,24 @@
     
             while($programRelationshipQuery->have_posts()) {
                 $programRelationshipQuery->the_post();
+
+                if (get_post_type() == 'event') {
+                    $eventDate = new DateTime(get_field('event_date'));
+                    $description = null;
+                    if (has_excerpt()) {
+                        $description = get_the_excerpt();
+                    } else {
+                        $description = wp_trim_words(get_the_content(), 18);
+                    }
+                    // Add array to post
+                    array_push($results['events'], array(
+                        'title' => get_the_title(),
+                        'permalink' => get_the_permalink(),
+                        'month' => $eventDate->format('M'),
+                        'day' => $eventDate->format('d'),
+                        'description' => $description
+                    ));
+                }
     
                 if (get_post_type() == 'professor') {
                     // Add array to post
