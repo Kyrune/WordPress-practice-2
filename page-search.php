@@ -46,7 +46,9 @@
       <?php } ?>
 
       <div class="generic-content">
-        <?php the_content(); ?>
+        <form>
+            <input type="search">
+        </form>
       </div>
     </div>
 
