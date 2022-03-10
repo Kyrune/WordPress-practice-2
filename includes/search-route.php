@@ -94,7 +94,7 @@
                 ));
             }
     
-            // Custom query for program relationships
+            // Custom query for programs & professors relationships
             $programRelationshipQuery = new WP_Query(array(
                 'post_type' => 'professor',
                 'meta_query' => $programsMetaQuery
