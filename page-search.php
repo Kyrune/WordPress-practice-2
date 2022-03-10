@@ -48,6 +48,7 @@
       <div class="generic-content">
         <form>
             <input type="search">
+            <input type="submit">
         </form>
       </div>
     </div>
