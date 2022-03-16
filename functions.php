@@ -134,6 +134,7 @@
         return esc_url(site_url('/'));
     }
 
+    // Add CSS files to login page
     add_action('login_enqueue_scripts', 'ourLoginCSS');
 
     function ourLoginCSS() {
@@ -143,6 +144,7 @@
         wp_enqueue_style('university_extra_styles', get_theme_file_uri('/build/index.css'));
     }
 
+    // Change login title
     add_filter('login_headertitle', 'ourLoginTitle');
 
     function ourLoginTitle() {
