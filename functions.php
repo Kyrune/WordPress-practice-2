@@ -130,6 +130,10 @@
     // Customize Login Screen
     add_filter('login_headerurl', 'ourHeaderUrl');
 
+    function ourHeaderUrl() {
+        return esc_url(site_url('/'));
+    }
+
     // Adds post type of Events
     // function university_post_types() {
     //     register_post_type('event', array(
