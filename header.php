@@ -32,7 +32,7 @@
           <div class="site-header__util">
             <?php if(is_user_logged_in()) { ?>
               <a href="<?php echo wp_logout_url(); ?>" class="btn btn--small btn--dark-orange float-left btn--with-photo">
-                <span></span>
+                <span><?php echo get_avatar(get_current_user_id(), 60); ?></span>
                 <span>Log Out</span>
               </a>
             <?php } else { ?>
