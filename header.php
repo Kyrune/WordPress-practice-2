@@ -31,7 +31,10 @@
           </nav>
           <div class="site-header__util">
             <?php if(is_user_logged_in()) { ?>
-              <a href="<?php echo wp_logout_url(); ?>" class="btn btn--small btn--dark-orange float-left btn--with-photo">Log Out</a>
+              <a href="<?php echo wp_logout_url(); ?>" class="btn btn--small btn--dark-orange float-left btn--with-photo">
+                <span></span>
+                <span>Log Out</span>
+              </a>
             <?php } else { ?>
               <a href="#" class="btn btn--small btn--orange float-left push-right">Login</a>
               <a href="<?php echo esc_url(site_url('/wp-signup.php')); ?>" class="btn btn--small btn--dark-orange float-left">Sign Up</a>
