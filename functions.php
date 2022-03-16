@@ -116,6 +116,8 @@
         }
     }
 
+    add_action('wp_loaded', 'noSubsAdminBar');
+
     // Adds post type of Events
     // function university_post_types() {
     //     register_post_type('event', array(
