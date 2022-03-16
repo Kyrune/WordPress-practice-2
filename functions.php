@@ -105,7 +105,7 @@
     add_action('pre_get_posts', 'university_adjust_queries');
 
     // Redirect subscriber accounts out of admin and onto homepage
-    
+    add_action('admin_init', 'redirectSubsToFrontend');
 
     // Adds post type of Events
     // function university_post_types() {
