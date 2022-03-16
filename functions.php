@@ -134,6 +134,8 @@
         return esc_url(site_url('/'));
     }
 
+    add_action('login_enqueue_scripts', 'ourLoginCSS');
+
     // Adds post type of Events
     // function university_post_types() {
     //     register_post_type('event', array(
