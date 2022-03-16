@@ -145,6 +145,10 @@
 
     add_filter('login_headertitle', 'ourLoginTitle');
 
+    function ourLoginTitle() {
+        return get_bloginfo('name');
+    }
+
     // Adds post type of Events
     // function university_post_types() {
     //     register_post_type('event', array(
