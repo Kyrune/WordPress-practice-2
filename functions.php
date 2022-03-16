@@ -107,6 +107,15 @@
     // Redirect subscriber accounts out of admin and onto homepage
     add_action('admin_init', 'redirectSubsToFrontend');
 
+    function redirectSubsToFrontend() {
+        $ourCurrentUser = wp_get_current_user();
+
+        if (count($ourCurrentUser->roles) == 1 AND $ourCurrentUser->roles[0] == 'subscriber') {
+            wp_redirect(site_url('/'));
+            exit;
+        }
+    }
+
     // Adds post type of Events
     // function university_post_types() {
     //     register_post_type('event', array(
