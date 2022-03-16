@@ -143,6 +143,8 @@
         wp_enqueue_style('university_extra_styles', get_theme_file_uri('/build/index.css'));
     }
 
+    add_filter('login_headertitle', 'ourLoginTitle');
+
     // Adds post type of Events
     // function university_post_types() {
     //     register_post_type('event', array(
