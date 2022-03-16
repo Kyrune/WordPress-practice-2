@@ -127,7 +127,7 @@
         }
     }
 
-    // Customize Login Screen
+    // Customize Login Screen logo url
     add_filter('login_headerurl', 'ourHeaderUrl');
 
     function ourHeaderUrl() {
