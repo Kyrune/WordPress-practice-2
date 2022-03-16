@@ -116,6 +116,7 @@
         }
     }
 
+    // Remove admin bar from homepage
     add_action('wp_loaded', 'noSubsAdminBar');
 
     function noSubsAdminBar() {
