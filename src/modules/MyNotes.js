@@ -5,10 +5,10 @@ class MyNotes {
         this.events();
     }
 
-
     events() {
         $(".delete-note").on("click", this.deleteNote);
         $(".edit-note").on("click", this.editNote.bind(this));
+        $(".update-note").on("click", this.updateNote.bind(this));
     }
 
     // Custom methods
