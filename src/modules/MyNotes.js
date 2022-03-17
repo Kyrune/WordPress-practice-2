@@ -27,6 +27,7 @@ class MyNotes {
         thisNote.find(".edit-note").html('<i class="fa fa-times" aria-hidden="true"></i> Cancel');
         thisNote.find(".note-title-field, .note-body-field").removeAttr("readonly").addClass("note-active-field");
         thisNote.find(".update-note").addClass("update-note--visible");
+        thisNote.data("state", "editable");
     }
 
     makeNoteReadOnly() {
