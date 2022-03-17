@@ -14,6 +14,13 @@ class MyNotes {
     // Custom methods
     editNote(e) {
         var thisNote = $(e.target).parents("li");
+        if (thisNote.data("state") == "editable") {
+            // Make read only
+            this.makeNoteReadOnly();
+        } else {
+            // Make editable
+            this.makeNoteEditable();
+        }
     }
 
     makeNoteEditable() {
