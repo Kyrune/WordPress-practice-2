@@ -19,6 +19,14 @@ class MyNotes {
         thisNote.find(".update-note").addClass("update-note--visible");
     }
 
+    makeNoteEditable() {
+
+    }
+
+    makeNoteReadOnly() {
+        
+    }
+
     deleteNote(e) {
         // alert("you clicked delete");
         var thisNote = $(e.target).parents("li");
