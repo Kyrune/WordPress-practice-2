@@ -8,6 +8,7 @@ class MyNotes {
 
     events() {
         $(".delete-note").on("click", this.deleteNote);
+        $(".edit-note").on("click", this.editNote);
     }
 
     // Custom methods
