@@ -1,6 +1,7 @@
+import $ from 'jquery';
 class MyNotes {
     constructor() {
-        alert("Hello from MyNotes");
+        // alert("Hello from MyNotes");
     }
 
 
