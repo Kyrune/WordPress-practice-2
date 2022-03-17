@@ -14,17 +14,18 @@ class MyNotes {
     // Custom methods
     editNote(e) {
         var thisNote = $(e.target).parents("li");
+    }
+
+    makeNoteEditable() {
         thisNote.find(".edit-note").html('<i class="fa fa-times" aria-hidden="true"></i> Cancel');
         thisNote.find(".note-title-field, .note-body-field").removeAttr("readonly").addClass("note-active-field");
         thisNote.find(".update-note").addClass("update-note--visible");
     }
 
-    makeNoteEditable() {
-
-    }
-
     makeNoteReadOnly() {
-        
+        thisNote.find(".edit-note").html('<i class="fa fa-pencil" aria-hidden="true"></i> Edit');
+        thisNote.find(".note-title-field, .note-body-field").attr("readonly", "readonly").removeClass("note-active-field");
+        thisNote.find(".update-note").removeClass("update-note--visible");
     }
 
     deleteNote(e) {
