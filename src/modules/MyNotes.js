@@ -28,13 +28,15 @@ class MyNotes {
     return thisNote
   }
 
-  // Methods will go here
+  // Custom methods
   editNote(e) {
     const thisNote = this.findNearestParentLi(e.target)
 
     if (thisNote.getAttribute("data-state") == "editable") {
+      // Make read only
       this.makeNoteReadOnly(thisNote)
     } else {
+      // Make editable
       this.makeNoteEditable(thisNote)
     }
   }
