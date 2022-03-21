@@ -8,7 +8,7 @@ class MyNotes {
     events() {
         $("#my-notes").on("click", ".delete-note", this.deleteNote);
         $("#my-notes").on("click", ".edit-note", this.editNote.bind(this));
-        $("#my-notes").on("click", "update-note", this.updateNote.bind(this));
+        $("#my-notes").on("click", ".update-note", this.updateNote.bind(this));
         $(".submit-note").on("click", this.createNote.bind(this));
     }
 
