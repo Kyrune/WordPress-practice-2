@@ -154,6 +154,7 @@
     }
 
     // Force note posts to be private
+    add_filter('wp_insert_post_data', 'makeNotePrivate');
 
     // Adds post type of Events
     // function university_post_types() {
