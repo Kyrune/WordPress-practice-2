@@ -18,7 +18,7 @@
                 <h2 class="headline headline--medium">Create New Note</h2>
                 <input class="new-note-title" placeholder="Title">
                 <textarea class="new-note-body" placeholder="Your note here..."></textarea>
-                <span>Create Note</span>
+                <span class="submit-note">Create Note</span>
             </div>
 
             <ul class="min-list link-list" id="my-notes">
