@@ -157,6 +157,7 @@
     add_filter('wp_insert_post_data', 'makeNotePrivate');
 
     function makeNotePrivate($data) {
+        // Ensures users notes are sanitized (removes html tags)
         if ($data['post_type'] == 'note') {
             $data['post_content'] = sanitize_textarea_field($data['post_content']);
         }
