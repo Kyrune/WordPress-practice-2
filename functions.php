@@ -153,6 +153,8 @@
         return get_bloginfo('name');
     }
 
+    // Force note posts to be private
+
     // Adds post type of Events
     // function university_post_types() {
     //     register_post_type('event', array(
