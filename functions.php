@@ -157,7 +157,11 @@
     add_filter('wp_insert_post_data', 'makeNotePrivate');
 
     function makeNotePrivate($data) {
-        if($data['post_type'] == 'note' AND $data['post_status'] != 'trash') {
+        if ($data['post_type'] == 'note') {
+            $data['post_content'] = sanitize_textarea_field($data['post_content']);
+        }
+
+        if ($data['post_type'] == 'note' AND $data['post_status'] != 'trash') {
             $data['post_status'] = "private";
         }
 
