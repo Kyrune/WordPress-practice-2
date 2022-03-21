@@ -13,6 +13,11 @@
         ?>
     
         <div class="container container--narrow page-section">
+
+            <div class="create-note">
+                <h2>Create New Note</h2>
+            </div>
+
             <ul class="min-list link-list" id="my-notes">
                 <?php    
                     $userNotes = new WP_Query(array(
