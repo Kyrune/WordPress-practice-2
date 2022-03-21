@@ -20,6 +20,7 @@ class MyNotes {
     if (e.target.classList.contains("update-note") || e.target.classList.contains("fa-arrow-right")) this.updateNote(e)
   }
 
+  // Regardless of edit/delete element you click on, loops up the parent tree
   findNearestParentLi(el) {
     let thisNote = el
     while (thisNote.tagName != "LI") {
@@ -41,6 +42,7 @@ class MyNotes {
     }
   }
 
+  // Edit note
   makeNoteEditable(thisNote) {
     thisNote.querySelector(".edit-note").innerHTML = '<i class="fa fa-times" aria-hidden="true"></i> Cancel'
     thisNote.querySelector(".note-title-field").removeAttribute("readonly")
@@ -51,6 +53,7 @@ class MyNotes {
     thisNote.setAttribute("data-state", "editable")
   }
 
+  // Makes note read only when not editing
   makeNoteReadOnly(thisNote) {
     thisNote.querySelector(".edit-note").innerHTML = '<i class="fa fa-pencil" aria-hidden="true"></i> Edit'
     thisNote.querySelector(".note-title-field").setAttribute("readonly", "true")
@@ -61,6 +64,7 @@ class MyNotes {
     thisNote.setAttribute("data-state", "cancel")
   }
 
+  // Delete note
   async deleteNote(e) {
     const thisNote = this.findNearestParentLi(e.target)
 
@@ -81,6 +85,7 @@ class MyNotes {
     }
   }
 
+  // Update note
   async updateNote(e) {
     const thisNote = this.findNearestParentLi(e.target)
 
@@ -97,6 +102,7 @@ class MyNotes {
     }
   }
 
+  // Create note
   async createNote() {
     var ourNewPost = {
       "title": document.querySelector(".new-note-title").value,
