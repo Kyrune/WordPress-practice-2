@@ -61,7 +61,6 @@ class MyNotes {
     }
 
     updateNote(e) {
-        // alert("you clicked delete");
         var thisNote = $(e.target).parents("li");
 
         var ourUpdatedPost = {
@@ -89,7 +88,6 @@ class MyNotes {
     }
 
     createNote(e) {
-        // alert("you clicked delete");
         var ourNewPost = {
             'title': $(".new-note-title").val(),
             'content': $(".new-note-body").val(),
