@@ -15,9 +15,9 @@
         <div class="container container--narrow page-section">
 
             <div class="create-note">
-                <h2>Create New Note</h2>
+                <h2 class="headline headline--medium">Create New Note</h2>
                 <input placeholder="Title">
-                <textarea placeholder="Your note here."></textarea>
+                <textarea placeholder="Your note here..."></textarea>
             </div>
 
             <ul class="min-list link-list" id="my-notes">
