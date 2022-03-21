@@ -159,7 +159,8 @@
     function makeNotePrivate($data) {
         // Ensures users notes are sanitized (removes html tags)
         if ($data['post_type'] == 'note') {
-            if (count_user_posts(get_current_user_id(), 'note') > 9) {
+            // Limits notes per user
+            if (count_user_posts(get_current_user_id(), 'note') > 4) {
                 die("You have reached your note limit.");
             }
 
