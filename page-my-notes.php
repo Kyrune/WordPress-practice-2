@@ -16,7 +16,7 @@
 
             <div class="create-note">
                 <h2 class="headline headline--medium">Create New Note</h2>
-                <input placeholder="Title">
+                <input class="new-note-title" placeholder="Title">
                 <textarea placeholder="Your note here..."></textarea>
             </div>
 
