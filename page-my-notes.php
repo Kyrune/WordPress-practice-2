@@ -16,8 +16,8 @@
 
             <div class="create-note">
                 <h2>Create New Note</h2>
-                <input>
-                <textarea></textarea>
+                <input placeholder="Title">
+                <textarea placeholder="Your note here."></textarea>
             </div>
 
             <ul class="min-list link-list" id="my-notes">
