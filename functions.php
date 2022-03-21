@@ -154,13 +154,13 @@
     }
 
     // Force note posts to be private
-    add_filter('wp_insert_post_data', 'makeNotePrivate');
+    add_filter('wp_insert_post_data', 'makeNotePrivate', 10, 2);
 
-    function makeNotePrivate($data) {
+    function makeNotePrivate($data, $postarr) {
         // Ensures users notes are sanitized (removes html tags)
         if ($data['post_type'] == 'note') {
             // Limits notes per user
-            if (count_user_posts(get_current_user_id(), 'note') > 4) {
+            if (count_user_posts(get_current_user_id(), 'note') > 4 AND !$postarr['ID']) {
                 die("You have reached your note limit.");
             }
 
