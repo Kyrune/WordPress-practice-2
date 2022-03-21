@@ -87,6 +87,35 @@ class MyNotes {
             }
         });
     }
+
+    createNote(e) {
+        // alert("you clicked delete");
+        var ourNewPost = {
+            'title': $(".new-note-title").val(),
+            'content': $(".new-note-body").val(),
+            'status': 'publish'
+        }
+
+        $.ajax({
+            beforeSend: (xhr) => {
+                xhr.setRequestHeader('X-WP-Nonce', universityData.nonce);
+            },
+            url: universityData.root_url + '/wp-json/wp/v2/note/',
+            type: 'POST',
+            data: ourNewPost,
+            success: (response) => {
+                $(".new-note-title, .new-note-body").val('');
+                $('<li>Data here</li>').prependTo("#my-notes").hide().slideDown();
+
+                console.log("Congrats");
+                console.log(response);
+            },
+            error: (response) => {
+                console.log("Sorry");
+                console.log(response);
+            }
+        });
+    }
 }
 
 export default MyNotes;
