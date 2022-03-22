@@ -21,7 +21,16 @@ class Like {
     }
 
     createLike() {
-        alert("create test");
+        $.ajax({
+            url: universityData.root_url + '/wp-json/university/v1/manageLike',
+            type: 'POST',
+            success: (response) => {
+                console.log(response)
+            },
+            error: (response) => {
+                console.log(response)
+            }
+        });
     }
 
     deleteLike() {
