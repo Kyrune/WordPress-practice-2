@@ -11,6 +11,18 @@ class Like {
 
     // Custom methods
     ourClickDispatcher() {
+        if ($(".like-box").data('exists') == 'yes') {
+            this.deleteLike();
+        } else {
+            this.createLike();
+        }
+    }
+
+    createLike() {
+
+    }
+
+    deleteLike() {
 
     }
 }
