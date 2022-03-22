@@ -6,10 +6,13 @@ class Like {
     }
 
     events() {
-
+        $(".like-box").on("click", this.ourClickDispatcher.bind(this))
     }
 
     // Custom methods
+    ourClickDispatcher() {
+
+    }
 }
 
 export default Like;
