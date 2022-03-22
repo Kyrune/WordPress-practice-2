@@ -10,8 +10,10 @@ class Like {
     }
 
     // Custom methods
-    ourClickDispatcher() {
-        if ($(".like-box").data('exists') == 'yes') {
+    ourClickDispatcher(e) {
+        var currentLikeBox = $(e.target).closest(".like-box");
+
+        if (currentLikeBox.data('exists') == 'yes') {
             this.deleteLike();
         } else {
             this.createLike();
@@ -19,11 +21,11 @@ class Like {
     }
 
     createLike() {
-        alert("create test")
+        alert("create test");
     }
 
     deleteLike() {
-        alert("delete test")
+        alert("delete test");
     }
 }
 
