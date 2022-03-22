@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 class Like {
     constructor() {
-        alert("testing from like.js");
+        this.events();
     }
 
     events() {
@@ -19,11 +19,11 @@ class Like {
     }
 
     createLike() {
-
+        alert("create test")
     }
 
     deleteLike() {
-
+        alert("delete test")
     }
 }
 
