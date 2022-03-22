@@ -1,6 +1,6 @@
 <?php 
 
-    require get_theme_file_path('/include/like-route.php');
+    require get_theme_file_path('/includes/like-route.php');
     require get_theme_file_path('/includes/search-route.php');
 
     // Create a custom REST API
