@@ -18,6 +18,7 @@
                     <div class="two-thirds">
                         <span class="like-box">
                             <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            <i class="fa fa-heart" aria-hidden="true"></i>
                         </span>
                         <?php the_content(); ?>
                     </div>
