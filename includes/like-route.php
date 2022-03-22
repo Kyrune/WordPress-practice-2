@@ -14,4 +14,10 @@ function universityLikeRoutes() {
     ));
 }
 
+function createLike() {
 
+}
+
+function deleteLike() {
+    
+}
