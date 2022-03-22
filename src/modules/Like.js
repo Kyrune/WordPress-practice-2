@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 class Like {
     constructor() {
         alert("testing from like.js");
