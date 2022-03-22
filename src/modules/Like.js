@@ -34,7 +34,16 @@ class Like {
     }
 
     deleteLike() {
-        alert("delete test");
+        $.ajax({
+            url: universityData.root_url + '/wp-json/university/v1/manageLike',
+            type: 'DELETE',
+            success: (response) => {
+                console.log(response)
+            },
+            error: (response) => {
+                console.log(response)
+            }
+        });
     }
 }
 
