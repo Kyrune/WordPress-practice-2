@@ -36,6 +36,7 @@ class Like {
                 // Update number of Likes
                 likeCount++;
                 currentLikeBox.find(".like-count").html(likeCount);
+                currentLikeBox.attr("data-like", response);
                 console.log(response)
             },
             error: (response) => {
