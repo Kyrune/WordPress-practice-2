@@ -47,6 +47,9 @@ class Like {
 
     deleteLike(currentLikeBox) {
         $.ajax({
+            beforeSend: (xhr) => {
+                xhr.setRequestHeader('X-WP-Nonce', universityData.nonce);
+            },
             url: universityData.root_url + '/wp-json/university/v1/manageLike',
             data: {'like': currentLikeBox.attr('data-like')},
             type: 'DELETE',
