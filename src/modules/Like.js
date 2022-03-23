@@ -51,10 +51,11 @@ class Like {
             data: {'like': currentLikeBox.attr('data-like')},
             type: 'DELETE',
             success: (response) => {
+                // Removes heart icon color fill
                 currentLikeBox.attr('data-exists', 'no');
-
+                // Fetches number of Likes
                 var likeCount = parseInt(currentLikeBox.find(".like-count").html(), 10);
-
+                // Update number of Likes
                 likeCount--;
                 currentLikeBox.find(".like-count").html(likeCount);
                 currentLikeBox.attr("data-like", '');
