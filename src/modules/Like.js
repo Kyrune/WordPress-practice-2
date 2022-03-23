@@ -29,9 +29,9 @@ class Like {
             type: 'POST',
             data: {'professorId': currentLikeBox.data('professor')},
             success: (response) => {
-
+                // Fill in heart icon color
                 currentLikeBox.attr('data-exists', 'yes');
-
+                // Fetches number of Likes
                 var likeCount = parseInt(currentLikeBox.find(".like-count").html(), 10);
                 likeCount++;
                 currentLikeBox.find(".like-count").html(likeCount);
