@@ -33,6 +33,7 @@ class Like {
                 currentLikeBox.attr('data-exists', 'yes');
                 // Fetches number of Likes
                 var likeCount = parseInt(currentLikeBox.find(".like-count").html(), 10);
+                // Update number of Likes
                 likeCount++;
                 currentLikeBox.find(".like-count").html(likeCount);
                 console.log(response)
