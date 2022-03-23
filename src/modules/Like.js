@@ -12,7 +12,7 @@ class Like {
     document.querySelector(".like-box").addEventListener("click", e => this.ourClickDispatcher(e))
   }
 
-  // methods
+  // Custom methods
   ourClickDispatcher(e) {
     let currentLikeBox = e.target
     while (!currentLikeBox.classList.contains("like-box")) {
@@ -30,8 +30,11 @@ class Like {
     try {
       const response = await axios.post(universityData.root_url + "/wp-json/university/v1/manageLike", { "professorId": currentLikeBox.getAttribute("data-professor") })
       if (response.data != "Only logged in users can create a like.") {
+        // Fill in heart icon color
         currentLikeBox.setAttribute("data-exists", "yes")
+        // Fetches number of Likes
         var likeCount = parseInt(currentLikeBox.querySelector(".like-count").innerHTML, 10)
+        // Update number of Likes
         likeCount++
         currentLikeBox.querySelector(".like-count").innerHTML = likeCount
         currentLikeBox.setAttribute("data-like", response.data)
@@ -49,8 +52,11 @@ class Like {
         method: 'delete',
         data: { "like": currentLikeBox.getAttribute("data-like") },
       })
+      // Removes heart icon color fill
       currentLikeBox.setAttribute("data-exists", "no")
+      // Fetches number of Likes
       var likeCount = parseInt(currentLikeBox.querySelector(".like-count").innerHTML, 10)
+      // Update number of Likes
       likeCount--
       currentLikeBox.querySelector(".like-count").innerHTML = likeCount
       currentLikeBox.setAttribute("data-like", "")
