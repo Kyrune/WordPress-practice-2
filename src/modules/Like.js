@@ -43,7 +43,7 @@ class Like {
         });
     }
 
-    deleteLike() {
+    deleteLike(currentLikeBox) {
         $.ajax({
             url: universityData.root_url + '/wp-json/university/v1/manageLike',
             data: {'like': currentLikeBox.attr('data-like')},
