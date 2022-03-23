@@ -29,6 +29,7 @@ class Like {
             type: 'POST',
             data: {'professorId': currentLikeBox.data('professor')},
             success: (response) => {
+                currentLikeBox.attr('data-exists', 'yes');
                 console.log(response)
             },
             error: (response) => {
